@@ -5,7 +5,7 @@ Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,11 +83,18 @@ Sorry, we don't have any screenshots yet.  Maybe soon.
 
 == Changelog ==
 
+= 1.1.2 =
+* Fixed the problem of listing other txt files as language options in settings
+* Fixed the problem of listing other txt files as language options in output
+
 = 1.1.1 =
 * The first functional version
 * Includes three languages: English (en), Spanish (es), and Dutch (nl)
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+* Fixed some confusing elements in settings and output
 
 == Arbitrary section ==
 
