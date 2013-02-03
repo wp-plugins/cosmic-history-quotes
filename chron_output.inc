@@ -104,7 +104,7 @@ if ($curr_lang === "nl"){
      }
 
 // Get list of Language Files to verify which languages are available
-	$txt_files = glob("$path/*.txt");
+	$txt_files = glob("$path/??_data.txt");
      foreach ($txt_files as $file) {
 		$file = str_replace($path, '', $file); 
 		$file = str_replace('/', '', $file); 
