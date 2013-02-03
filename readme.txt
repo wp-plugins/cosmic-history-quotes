@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Each day, CHQ outputs one of the 365 different quotes carefully selected from the 7-volume Cosmic History Chronicles at [__Lawoftime.org__](http://Lawoftime.org).
+Each day, CHQ outputs one of the 365 different quotes carefully selected from the 7-volume Cosmic History Chronicles at [__Lawoftime.org__](http://Lawoftime.org/).
 
 Cosmic History Quotes (CHQ) is yet another labor of love by Anthony Fogleman, who wishes to share all peaceful practices with the world, and certainly sees no harm in sharing them and making them able to be shared. 
 
@@ -19,6 +19,7 @@ The Cosmic History Chronicles quote program was first conceived by Juryt Abma of
 
 Contributors include:
 
+* [__Lawoftime.org__](http://Lawoftime.org/)
 * [__Planet Art Network (PAN)__](http://planetartnetwork.info/)
 * [__Space Station Plaza (SSP)__](http://spacestationplaza.com/)
 * Author: [__Anthony Fogleman__](http://anthonyfogleman.com/) (Anka) Kin 139 Blue Solar Storm
