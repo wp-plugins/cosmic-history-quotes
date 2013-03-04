@@ -1,4 +1,4 @@
-=== Cosmic History Quotes ===
+=== Cosmic History Quotes === 
 Contributors: tonyray
 Author URI: http://anthonyfogleman.com/
 Donate link: http://anthonyfogleman.com/blog/donations/
