@@ -38,26 +38,16 @@ I thank you, in advance, for any donations that you feel inclined to make to hel
 == Installation ==
 
 Automatic Method
-
 1. Use WordPress Dashboard -> Plugins -> Add New
-
 2. Search: "Cosmic History Quotes"
-
 3. Click "install now"
-
 4. Activate the plugin (in Plugins menu)
 
-
 Manual Method
-
 1. Download the zip file from AnthonyFogleman.com
-
 2. Expand contents of zip file.  It should create the directory: cosmic-history-quotes
-
 3. create the directory: cosmic-history-quotes
-
 4. Upload expanded contents of zip file to your plugin directory: /wp-content/plugins/
-
 5. Activate the plugin (in Plugins menu)
 
 Once installed, to make it work:
@@ -81,6 +71,9 @@ Sorry, we don't have any screenshots yet.  Maybe soon.
 
 == Changelog ==
 
+= 1.2.1 =
+* Added option for showing contributor links
+
 = 1.1.2 =
 * Fixed the problem of listing other txt files as language options in settings
 * Fixed the problem of listing other txt files as language options in output
@@ -91,8 +84,8 @@ Sorry, we don't have any screenshots yet.  Maybe soon.
 
 == Upgrade Notice ==
 
-= 1.1.2 =
-* Fixed some confusing elements in settings and output
+= 1.2.1 =
+* Added option for showing contributor links
 
 == Arbitrary section ==
 

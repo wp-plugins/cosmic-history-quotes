@@ -15,6 +15,28 @@ a.credits:visited	 {text-align: right;color:red;	font-size: 10px; line-height: 1
 a.credits:hover	 {text-align: right;color:blue;	font-size: 10px; line-height: 12px; text-decoration:none;border: none; display: inline;background: none;padding: 0px 0px 0px 0px; }
 a.credits:active	 {text-align: right;color:red;	font-size: 10px; line-height: 12px; text-decoration:none;border: none; display: inline;background: none; padding: 0px 0px 0px 0px;}
 
+.ads {
+
+font-size: 10px;
+float: right;
+line-height: 12px;
+margin-top: 12px;
+}
+
+.ads a:link, .ads a:visited, .ads a:hover, .ads a:active {
+
+display: inline;
+background: none;
+border-bottom: 1px solid #CCC;
+padding: 5px;
+padding-left: 0px;
+text-decoration: none;
+font-size: 10px;
+font-weight: bold;
+border-top: 1px solid #ccc;
+
+}
+
 a.langa {
 	font-size: 10px;
 	line-height: 12px;
@@ -45,23 +67,17 @@ a.langa:active	 {text-align: left;color:red;	font-size: 10px; line-height: 12px;
 
 .langleft {
 	text-align: left;
-//     border: 1px solid #00F;
-     width: 125px;
      height: auto;
      float: left;
-//	position: relative;
 	z-index: 110;	
 	margin: 0px;
-	padding: 0px;
+	padding-top: 7px;
 }
 
 .creditp {
 	text-align: right;
-//     border: 1px solid #F00;
      width: auto;
      height: auto;
-//     float: right;
-//     position: relative;
 	z-index: 100;
 	margin: 0px;
 	padding: 0px;

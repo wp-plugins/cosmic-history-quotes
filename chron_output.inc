@@ -135,12 +135,13 @@ if ($permit_ads === "YES"){
 	echo "<a target=\"_BLANK\" href=\"http://spacestationplaza.com/\" title=\"SpaceStationPlaza.com\">SSP</a>";
 	echo " - ";
 	echo "<a target=\"_BLANK\" href=\"http://anthonyfogleman.com/blog/cosmic-history-quotes-wp-plugin/\" title=\"Cosmic History Quotes Plugin Home Page\">ARF</a>";
+
+
 	echo "</div>";
 
 }
 
 	echo "<div class=langleft>$lang_string</div>\n";
-
 // End main containers
 	echo "</div>";
 

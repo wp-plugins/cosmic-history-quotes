@@ -3,7 +3,7 @@
 Plugin Name: Cosmic-History-Quotes
 Plugin URI: http://anthonyfogleman.com/blog/cosmic-history-quotes-wp-plugin/
 Description: Cosmic History Quotes - 365 daily quotes from the seven volume Cosmic History Chronicles available at Lawoftime.org.  After installing this plugin copy and paste the shortcode: [cosmic-quotes] into any page, post or text widget.  After installing, a new menu appears in your dashboard called "CHC Settings" allowing control of language, visibility, and style.
-Version: 1.1.2
+Version: 1.2.1
 Author: Anthony Raymond Fogleman
 Author URI: http://anthonyfogleman.com
 License: GPLv2
