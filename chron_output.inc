@@ -22,6 +22,8 @@ function start_chron() {
 	$font_size_px = get_option('font_size'); if ($font_size_px == ""){$font_size_px = 10;}
 	$line_height_px = get_option('line_height_px'); if ($line_height_px == ""){$line_height_px = 14;}
 	$info_position = get_option('info_position'); if ($info_position == ""){$info_position = B;}
+// Add Ads 
+	$permit_ads = get_option('permit_ads');
 
 // Adjust Lang File to Current Setting
 	 $curr_lang = $start_lang;
@@ -123,10 +125,25 @@ if ($curr_lang === "nl"){
 	$lang_string = str_replace($curr_lang, "<font class=langsel>$curr_lang</font>", "$lang_string");
 
 	echo "</div>";
+
+if ($permit_ads === "YES"){
+	echo "<div class=ads>";
+	echo "<a target=\"_BLANK\" href=\"http://lawoftime.org/\" title=\"Foundation for the Law of Time\">LOT</a>";
+	echo " - ";
+	echo "<a target=\"_BLANK\" href=\"http://www.planetartnetwork.info/\" title=\"Planet Art Network\">PAN</a>";
+	echo " - ";
+	echo "<a target=\"_BLANK\" href=\"http://spacestationplaza.com/\" title=\"SpaceStationPlaza.com\">SSP</a>";
+	echo " - ";
+	echo "<a target=\"_BLANK\" href=\"http://anthonyfogleman.com/blog/cosmic-history-quotes-wp-plugin/\" title=\"Cosmic History Quotes Plugin Home Page\">ARF</a>";
+	echo "</div>";
+
+}
+
 	echo "<div class=langleft>$lang_string</div>\n";
 
 // End main containers
 	echo "</div>";
+
 
 // Clear all 
 	echo "<br clear=all>";

@@ -17,6 +17,8 @@ function register_mysettings() {
 	register_setting( 'chq-settings-group', 'line_height_px' );
 	register_setting( 'chq-settings-group', 'last_save_time' );
 	register_setting( 'chq-settings-group', 'info_position' );
+	register_setting( 'chq-settings-group', 'permit_ads' );
+
 }
 
 function chq_settings_page() {
@@ -39,6 +41,9 @@ if ($_GET["settings-updated"] === "true"){
 
 $curr_date = date("D F j, Y g:i:s a  ");
 $save_time_mess = get_option('last_save_time');
+
+$permit_ads = get_option('permit_ads');
+
 echo "<table bgcolor=$table_bg>";
 if ($_GET["settings-updated"] === "true"){
 	echo "<tr><th colspan=2><h2>Settings Saved!</h2></th><tr>";
@@ -119,6 +124,11 @@ $path = "../wp-content/plugins/cosmic-history-quotes";
 	   <tr valign="top">
 	   <th scope="row"><b>Line Height</b> in pixels (default: 14)</th>
 	   <td><input size=6 maxlength=2 type="text" name="line_height_px" value="<?php echo get_option('line_height_px'); ?>" />px</td>
+	   </tr>
+
+	   <tr valign="top">
+	   <th scope="row"><b>Show Ads</b></th>
+	   <td><select name=permit_ads><option value="YES">YES</option><option value="NO">NO</option></select></td>
 	   </tr>
 
 	   <tr valign="top">
