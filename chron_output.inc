@@ -60,10 +60,12 @@ if ($curr_lang === "nl"){
 // Start main container
 	echo " <DIV STYLE=\"";
 	if ($bg_color === ""){} else {echo "background: #".$bg_color.";";}
-	echo " width: ";
+	echo "width: ";
 	if ($div_width_px < 50){echo "auto;";} else {echo $div_width_px."px;";}
 	echo " padding: 2px;\">";
-	echo " <DIV STYLE=\"color: #".$text_color."; font-size: ".$font_size_px."px;  line-height: ".$line_height_px."px; \"; \">";
+
+
+	echo " <DIV STYLE=\"color: #".$text_color."; font-size: ".$font_size_px."px;  line-height: ".$line_height_px."px;\">";
 
 // Open Titles and Data Files into an array.
 	$title_lines = file("$path/$titles_filename");
@@ -95,15 +97,17 @@ if ($curr_lang === "nl"){
                	$title_text = $doot_text;
                }
 
-               $intro_output = "<i><b>".htmlentities($title_text)."</b> ";
-               $intro_output .= " $today_greg_month_abbrev $today_greg_day, $intro_text2 $day_of_moon $intro_text3 $this_moon, $month_title</font></i>";
+               $intro_output = "<div class=intro_section><a target=\"_BLANK\" href=\"http://lawoftime.org/\" title=\"Foundation for the Law of Time\">".htmlentities($title_text)."</a><br> ";
+               $intro_output .= " $today_greg_month_abbrev $today_greg_day, $intro_text2 $day_of_moon $intro_text3 $this_moon, $month_title</i></div>";
                
-               if ($info_position == "T"){echo "$intro_output <hr>";}
+               if ($info_position == "T"){echo "$intro_output <P>";}
                echo htmlentities($text);
-               if ($info_position == "B"){echo "<hr> $intro_output";}
+               if ($info_position == "B"){echo "<P> $intro_output";}
 			break;
 		}
      }
+
+echo "</div>";
 
 // Get list of Language Files to verify which languages are available
 	$txt_files = glob("$path/??_data.txt");
@@ -117,37 +121,35 @@ if ($curr_lang === "nl"){
 	$langs = array_unique($lang_name);
 
      foreach ($langs as $lang) {
-		if ($lang != $curr_lang){$lang = "<a class=langa title=\"Change the language to $lang\" href=\"?lang=$lang\">$lang</a>";}
-		if (!isset($lang_string)){$lang_string = "$lang";} else {$lang_string .= " - $lang";}
+		if ($lang != $curr_lang){$lang = "<a class=langa title=\"Change language to $lang\" href=\"?lang=$lang\">$lang</a>";}
+		if (!isset($lang_string)){$lang_string = "$lang";} else {$lang_string .= " $lang";}
 	}
 
 // Provides: <body text='black'>
-	$lang_string = str_replace($curr_lang, "<font class=langsel>$curr_lang</font>", "$lang_string");
+//	$lang_string = str_replace($curr_lang, " $curr_lang ", "$lang_string");
 
-	echo "</div>";
+//	echo "</div>";
 
 if ($permit_ads === "YES"){
 	echo "<div class=ads>";
-	echo "<a target=\"_BLANK\" href=\"http://lawoftime.org/\" title=\"Foundation for the Law of Time\">LOT</a>";
-	echo " - ";
+	echo "<a target=\"_BLANK\" href=\"http://lawoftime.org/\" title=\"Foundation for the Law of Time\">FLOT</a>";
+	echo " ";
 	echo "<a target=\"_BLANK\" href=\"http://www.planetartnetwork.info/\" title=\"Planet Art Network\">PAN</a>";
-	echo " - ";
-	echo "<a target=\"_BLANK\" href=\"http://spacestationplaza.com/\" title=\"SpaceStationPlaza.com\">SSP</a>";
-	echo " - ";
-	echo "<a target=\"_BLANK\" href=\"http://anthonyfogleman.com/blog/cosmic-history-quotes-wp-plugin/\" title=\"Cosmic History Quotes Plugin Home Page\">ARF</a>";
-
-
+	echo " ";
+	echo "<a target=\"_BLANK\" href=\"http://spacestationplaza.com/\" title=\"Space Station Plaza\">SSP</a>";
+//	echo "<a target=\"_BLANK\" href=\"http://anthonyfogleman.com/blog/cosmic-history-quotes-wp-plugin/\" title=\"Cosmic History Quotes Plugin Home Page\">ARF</a>";
 	echo "</div>";
 
 }
 
 	echo "<div class=langleft>$lang_string</div>\n";
+
 // End main containers
 	echo "</div>";
 
 
 // Clear all 
-	echo "<br clear=all>";
+	echo "<div style=clear:both;></div>";
 
 // Stop Storing Output ...
 	$content = ob_get_contents();
