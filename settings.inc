@@ -1,13 +1,15 @@
 <?php
 
+// Had this before:
+
 function chq_create_menu() {
 
 	//create new top-level menu
-	add_menu_page('CHQ Plugin Settings', 'CHQ Settings', 'administrator', __FILE__, 'chq_settings_page',plugins_url('peeps.png?ver=20111329', __FILE__));
-	add_action( 'admin_init', 'register_mysettings' );
+	add_options_page('CHQ Plugin Settings', 'CHQ Settings', 'administrator', __FILE__, 'chq_settings_page');
+	add_action( 'admin_init', 'cosmic_history_quotes_register_mysettings' );
 }
 
-function register_mysettings() {
+function cosmic_history_quotes_register_mysettings() {
 	//register our settings
 	register_setting( 'chq-settings-group', 'starting_language' );
 	register_setting( 'chq-settings-group', 'text_color' );

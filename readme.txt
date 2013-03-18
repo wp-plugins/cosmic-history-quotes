@@ -5,7 +5,7 @@ Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas, Cosmic History
 Requires at least: 2.9
 Tested up to: 3.5.1
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,7 +58,7 @@ Aho mitakeoasin, en lakesh, ahaw!
 
 = Can I change the default language =
 
-YES! After installing, a new menu appears in your dashboard called "CHC Settings" allowing control of language, visibility, and style.
+YES! After installing, a new menu appears in your dashboard called "CHC Settings" under "Settings" allowing control of language, visibility, and style.
 
 = Can I place this in any page or post? =
 
@@ -87,6 +87,10 @@ You can modify items such as:
 
 == Changelog ==
 
+= 2.1.2 - 18.03.2013 =
+* Bugfix : Moved settings to a submenu (CHQ Settings) under the main menu item "Settings"
+* Bugfix : Fixed a declaration of register_setting error conflict when activated with other plugins using the same declaration
+
 = 2.1.1 - 18.03.2013 =
 * NEW : Added option for showing contributor links
 * NEW : Added screenshots
@@ -105,6 +109,9 @@ You can modify items such as:
 * Includes three languages: English (en), Spanish (es), and Dutch (nl)
 
 == Upgrade Notice ==
+
+= 2.1.2 =
+We fixed a declaration of register_setting error and we went ahead and put the settings menu under the settings section instead of creating a new main menu item.
 
 = 2.1.1 =
 We fixed some issues with extended characters, gave you more options in the settings, made changes to the paths to keep it working in non-standard WP installations, and added some screenshots
