@@ -3,7 +3,7 @@
 Plugin Name: Cosmic-History-Quotes
 Plugin URI: http://anthonyfogleman.com/blog/cosmic-history-quotes-wp-plugin/
 Description: Inserts one of 365 daily quotes from the seven volume Cosmic History Chronicles available at Lawoftime.org into your WP site.
-Version: 1.2.2
+Version: 2.1.3
 Author: Anthony Raymond Fogleman
 Author URI: http://anthonyfogleman.com
 License: GPLv2
@@ -38,5 +38,8 @@ require_once('settings.inc');
 
 // create custom plugin settings menu
 add_action('admin_menu', 'chq_create_menu');
+
+// This code makes sure shortcode will work in text widget
+add_filter('widget_text', 'do_shortcode');
 
 /* EOF */

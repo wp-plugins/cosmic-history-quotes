@@ -5,7 +5,7 @@ Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas, Cosmic History
 Requires at least: 2.9
 Tested up to: 3.5.1
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -86,6 +86,9 @@ You can modify items such as:
 3. English output for March 18
 
 == Changelog ==
+
+= 2.1.3 - 18.03.2013 =
+* Bugfix : Added code makes sure shortcode will work in text widget
 
 = 2.1.2 - 18.03.2013 =
 * Bugfix : Moved settings to a submenu (CHQ Settings) under the main menu item "Settings"
