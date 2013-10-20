@@ -11,7 +11,6 @@ function chq_create_menu() {
 
 function cosmic_history_quotes_register_mysettings() {
 	//register our settings
-	register_setting( 'chq-settings-group', 'starting_language' );
 	register_setting( 'chq-settings-group', 'text_color' );
 	register_setting( 'chq-settings-group', 'background_color' );
 	register_setting( 'chq-settings-group', 'div_width' );
@@ -20,7 +19,6 @@ function cosmic_history_quotes_register_mysettings() {
 	register_setting( 'chq-settings-group', 'last_save_time' );
 	register_setting( 'chq-settings-group', 'info_position' );
 	register_setting( 'chq-settings-group', 'permit_ads' );
-
 }
 
 function chq_settings_page() {
@@ -64,45 +62,6 @@ echo "</table>";
     <?php // do_settings( 'chq-settings-group' ); ?>
     <table class="form-table">
 
-
-<?php
-// Path to files
-$path = "../wp-content/plugins/cosmic-history-quotes";
-
-// Get list of Language Files to verify which languages are available
-	$txt_files = glob("$path/??_data.txt");
-     foreach ($txt_files as $file) {
-		$file = str_replace($path, '', $file); 
-		$file = str_replace('/', '', $file); 
-		$file = str_replace('.txt', '', $file);
-		$pieces = explode("_", $file);
-		$lang_name[] = $pieces[0];
-	}
-	$langs = array_unique($lang_name);
-
-// Testing
-// echo "<hr>";
-// echo $txt_files;
-// echo "<hr>";
-
-?>
-	   <tr valign="top">
-	   <th scope="row"><b>Starting Language</b> <br> All installed languages should appear as options.  Visit <a href="http://anthonyfogleman.com/blog/wordpress-plugins/">plugin site</a> for updates and other interesting plugins.</th>
-<td>
-<?php
-
-	$lang_selected = get_option('starting_language');
-
-     foreach ($langs as $lang) {
-		echo "<input type=radio name=starting_language value=$lang";
-		if ($lang === $lang_selected){echo " CHECKED";}
-		echo "> $lang<BR>";
-	}
-?>
-
-</td>
-	   </tr>
-	    
 	   <tr valign="top">
 	   <th scope="row"><b>Font Color</b> (default: 666)</th>
 	   <td>Hex: #<input size=8 maxlength=6 type="text" name="text_color" value="<?php echo get_option('text_color'); ?>" /></td>
@@ -164,7 +123,8 @@ $posit = get_option('info_position');
 	<li><a class=credits href="http://planetartnetwork.info/" title="Planet Art Network">Planet Art Network (PAN)</a></li>
 	<li><a class=credits href="http://spacestationplaza.com/" title="Space Station Plaza Galactic Portal">Space Station Plaza (SSP)</a></li>
 	<li><a class=credits href="http://anthonyfogleman.com/blog/wordpress-plugins/" title="Plugin author: Anthony Fogleman (Anka) Kin 139 Solar Storm">Plugins by Anka (kin 139)</a></li>
-	<li><a class=credits href="http://www.wetvantijd.nl" title="Dutch translation: Juryt Abma Kin-243 Solar Night">Foundation for the Law of Time Netherlands</a></li>
+	<li><a class=credits href="http://www.wetvantijd.nl" title="Dutch translation: Juryt Abma Kin-243 Solar Night">Developed for the Dutch Law of Time website</a></li>
+	<li><a class=credits href="http://u-ching.com" title="uCHING - Juryt Abma Kin-243 Solar Night">Developed also for u-Ching.com</a></li>
 
 
 </div>
