@@ -27,7 +27,7 @@ function start_chron() {
 	$line_height_px = get_option('line_height_px'); if ($line_height_px == ""){$line_height_px = 14;}
 	$info_position = get_option('info_position'); if ($info_position == ""){$info_position = B;}
 // Add Ads 
-	$permit_ads = get_option('permit_ads');
+	$permit_credits = get_option('permit_credits');
 
 // Show title or not?
 	$show_chq_title = get_option('show_chq_title');
@@ -105,16 +105,27 @@ function start_chron() {
 
                $intro_output .= "<div class=chq_intro_section>$today_greg_day_num.$today_greg_month_num.$today_greg_year_num, $intro_text2 $day_of_moon $intro_text3 $this_moon, $month_title</i></div>";
                
-               if ($info_position == "T"){echo "$intro_output <P>";}
-               echo "<div class=chq_daily_text>".$text."</div>";
-               if ($info_position == "B"){echo "<P>\n".$intro_output;}
-			break;
+               if ($info_position == "N"){ 
+				// do nothing
+			} else {
+                    if ($info_position == "T"){echo "$intro_output <P>";}
+			}
+
+// Echo the Quote
+                    echo "<div class=chq_daily_text>".$text."</div>";
+
+               if ($info_position == "N"){ 
+				// do nothing
+			} else {
+                    if ($info_position == "B"){echo "<P>\n".$intro_output;}
+			}
+
 		}
      }
 
      echo "</div>";
      
-     if ($permit_ads === "YES"){
+     if ($permit_credits === "YES"){
      	echo "<div class=chq_ads>";
      	echo "<a target=\"_BLANK\" href=\"http://lawoftime.org/\" title=\"Foundation for the Law of Time\">FLT</a>";
      	echo " ";

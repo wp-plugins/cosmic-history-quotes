@@ -18,7 +18,7 @@ function cosmic_history_quotes_register_mysettings() {
 	register_setting( 'chq-settings-group', 'line_height_px' );
 	register_setting( 'chq-settings-group', 'last_save_time' );
 	register_setting( 'chq-settings-group', 'info_position' );
-	register_setting( 'chq-settings-group', 'permit_ads' );
+	register_setting( 'chq-settings-group', 'permit_credits' );
 	register_setting( 'chq-settings-group', 'show_chq_title' );
 
 }
@@ -87,13 +87,13 @@ echo "</table>";
 	   <td><input size=6 maxlength=2 type="text" name="line_height_px" value="<?php echo get_option('line_height_px'); ?>" />px</td>
 	   </tr>
 
-		<?php $permit_ads = get_option('permit_ads'); ?>
+		<?php $permit_credits = get_option('permit_credits'); ?>
 
 	   <tr valign="top">
-	   <th scope="row"><b>Show Ads</b></th>
+	   <th scope="row"><b>Show Credits</b></th>
 	   	<td>
-		<input type=radio name="permit_ads" value="YES" <?php if ($permit_ads === "YES"){echo " CHECKED";} ?> /> Yes
-		<input type=radio name="permit_ads" value="NO" <?php if ($permit_ads === "NO"){echo " CHECKED";} ?> /> No
+		<input type=radio name="permit_credits" value="YES" <?php if ($permit_credits === "YES"){echo " CHECKED";} ?> /> Yes
+		<input type=radio name="permit_credits" value="NO" <?php if ($permit_credits === "NO"){echo " CHECKED";} ?> /> No
 		</td>
 	   </tr>
 
