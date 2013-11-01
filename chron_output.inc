@@ -29,11 +29,14 @@ function start_chron() {
 // Add Ads 
 	$permit_ads = get_option('permit_ads');
 
+// Show title or not?
+	$show_chq_title = get_option('show_chq_title');
+
      if ($chq_locale == "es_ES"){
      	$title_text = "Citas de la Historia Cósmica"; $intro_text1 = " por"; $intro_text2 = "dia"; $intro_text3 = "de Luna";
      	$doot_text = "Día Fuera del Tiempo (25 julio)";
      } elseif ($chq_locale == "nl_NL"){
-     	$title_text = "Kosmische Geschiedenis"; $intro_text1 = " voor"; $intro_text2 = "dag"; $intro_text3 = "van Maan";
+     	$title_text = "Kosmische Geschiedenis Citaat"; $intro_text1 = " voor"; $intro_text2 = "dag"; $intro_text3 = "van Maan";
      	$doot_text = "Dag Buiten de Tijd (25 juli)";
      } else {
      	$chq_locale = "en_EN";
@@ -96,11 +99,14 @@ function start_chron() {
 			$title_text = utf8_encode($title_text);
 			$text = utf8_encode($text);
 
-               $intro_output = "<div class=intro_section><strong>".$title_text."</strong><br> ";
-               $intro_output .= "$today_greg_day_num.$today_greg_month_num.$today_greg_year_num, $intro_text2 $day_of_moon $intro_text3 $this_moon, $month_title</i></div>";
+			if ($show_chq_title === "YES"){
+               	$intro_output = "<div class=chq_title_txt>".$title_text."</div> ";
+			}
+
+               $intro_output .= "<div class=chq_intro_section>$today_greg_day_num.$today_greg_month_num.$today_greg_year_num, $intro_text2 $day_of_moon $intro_text3 $this_moon, $month_title</i></div>";
                
                if ($info_position == "T"){echo "$intro_output <P>";}
-               echo $text;
+               echo "<div class=chq_daily_text>".$text."</div>";
                if ($info_position == "B"){echo "<P>\n".$intro_output;}
 			break;
 		}
@@ -109,7 +115,7 @@ function start_chron() {
      echo "</div>";
      
      if ($permit_ads === "YES"){
-     	echo "<div class=ads>";
+     	echo "<div class=chq_ads>";
      	echo "<a target=\"_BLANK\" href=\"http://lawoftime.org/\" title=\"Foundation for the Law of Time\">FLT</a>";
      	echo " ";
      	echo "<a target=\"_BLANK\" href=\"http://spacestationplaza.com/\" title=\"Space Station Plaza\">SSP</a>";

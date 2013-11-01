@@ -15,14 +15,14 @@ a.credits:visited {text-align: right;color:red;	font-size: 10px; line-height: 12
 a.credits:hover {text-align: right;color:blue;	font-size: 10px; line-height: 12px; text-decoration:none;border: none; display: inline;background: none;padding: 0px 0px 0px 0px; }
 a.credits:active {text-align: right;color:red;	font-size: 10px; line-height: 12px; text-decoration:none;border: none; display: inline;background: none; padding: 0px 0px 0px 0px;}
 
-.ads {
+.chq_ads {
   font-size: 10px;
   float: right;
   line-height: 12px;
   margin-top: 12px;
 }
 
-.ads a:link, .ads a:visited, .ads a:hover, .ads a:active {
+.chq_ads a:link, .chq_ads a:visited, .chq_ads a:hover, .chq_ads a:active {
 
   display: inline;
   background: none;
@@ -83,9 +83,23 @@ a.langa:active	 {text-align: left;color:red;	font-size: 10px; line-height: 12px;
 	padding-top: 12px;
 }
 
-.intro_section {
+.chq_ads {
      font-size: 12px;
 	line-height: 14px;
 	padding-top: 10px;
 }
-
+
+.chq_daily_text {
+
+}
+
+.chq_title_txt {
+     font-weight: bolder;
+     font-size: smaller;
+     padding-top: 5px;
+     padding-bottom: 5px;
+}
+
+.chq_intro_section {
+	font-size: smaller;
+}

@@ -19,6 +19,8 @@ function cosmic_history_quotes_register_mysettings() {
 	register_setting( 'chq-settings-group', 'last_save_time' );
 	register_setting( 'chq-settings-group', 'info_position' );
 	register_setting( 'chq-settings-group', 'permit_ads' );
+	register_setting( 'chq-settings-group', 'show_chq_title' );
+
 }
 
 function chq_settings_page() {
@@ -41,8 +43,6 @@ if ($_GET["settings-updated"] === "true"){
 
 $curr_date = date("D F j, Y g:i:s a  ");
 $save_time_mess = get_option('last_save_time');
-
-$permit_ads = get_option('permit_ads');
 
 echo "<table bgcolor=$table_bg>";
 if ($_GET["settings-updated"] === "true"){
@@ -87,9 +87,25 @@ echo "</table>";
 	   <td><input size=6 maxlength=2 type="text" name="line_height_px" value="<?php echo get_option('line_height_px'); ?>" />px</td>
 	   </tr>
 
+		<?php $permit_ads = get_option('permit_ads'); ?>
+
 	   <tr valign="top">
 	   <th scope="row"><b>Show Ads</b></th>
-	   <td><select name=permit_ads><option value="YES">YES</option><option value="NO">NO</option></select></td>
+	   	<td>
+		<input type=radio name="permit_ads" value="YES" <?php if ($permit_ads === "YES"){echo " CHECKED";} ?> /> Yes
+		<input type=radio name="permit_ads" value="NO" <?php if ($permit_ads === "NO"){echo " CHECKED";} ?> /> No
+		</td>
+	   </tr>
+
+	   <tr valign="top">
+
+	<?php $show_chq_title = get_option('show_chq_title'); ?>
+
+	   <th scope="row"><b>Show CHQ Title</b></th>
+	   	<td>
+		<input type=radio name="show_chq_title" value="YES" <?php if ($show_chq_title === "YES"){echo " CHECKED";} ?> /> Yes
+		<input type=radio name="show_chq_title" value="NO" <?php if ($show_chq_title === "NO"){echo " CHECKED";} ?> /> No
+		</td>
 	   </tr>
 
 	   <tr valign="top">
