@@ -5,7 +5,7 @@ Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, uching, u-ching, iching, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas, Cosmic History
 Requires at least: WP 3.2, BuddyPress 1.2.9
 Tested up to: WP 3.6.1, BuddyPress 1.8.1
-Stable tag: 2.2.1
+Stable tag: 2.2.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,16 +15,17 @@ Each day, CHQ outputs one of 365 quotes selected from the 7-volume Cosmic Histor
 
 Cosmic History Quotes (CHQ) is a collaboration between Juryt Abma and Anthony Fogleman.
 
-Usage: Install plugin, and insert this shortlink into a text widget for your sidebar or directly into a post with sortcode `[cosmic-quotes]` 
+Usage: Install plugin, and insert sortcode `[cosmic-quotes]` into a text widget (for sidebar) or a post/page.
 
 = Contributors include =
 
-* [__u-ching.com__](http://u-ching.com/)
 * [__Lawoftime.org__](http://Lawoftime.org/)
 * [__Planet Art Network (PAN)__](http://planetartnetwork.info/)
 * [__Space Station Plaza (SSP)__](http://spacestationplaza.com/)
 * [__Foundation for the Law of Time Netherlands__](http://www.wetvantijd.nl) Dutch version: Juryt Abma Kin-243 Blue Solar Night
-* [__Anthony Fogleman Blog__](http://anthonyfogleman.com/) Anka Kin 139 Blue Solar Storm
+* [__Anthony Fogleman WP Blog__](http://anthonyfogleman.com/) Anthony Fogleman - Anka Kin 139 Blue Solar Storm
+* [__Uptime Hosting WP Site__](http://uptimehosting.com/) Anthony's Hosting and Programming Service
+* [__u-ching.com WP/BP/WPML__](http://u-ching.com/) A site designed for learning and using the uChing Code
 
 == Translation credits ==
 
@@ -96,6 +97,9 @@ You can modify items such as:
 
 == Changelog ==
 
+= 2.2.1 - 1.11.2013 =
+* Update : Fixed extended characters for Spanish not showing up properly.
+
 = 2.2.1 - 20.10.2013 =
 * Update : Added localization, switches automatically with or without WPML, sensing $locale.  Still limited to Spanish, Dutch and English.
 
@@ -124,6 +128,9 @@ You can modify items such as:
 * Includes three languages: English (en), Spanish (es), and Dutch (nl)
 
 == Upgrade Notice ==
+
+= 2.2.2 =
+Fixed extended Spanish characters not showing up while viewing site in Spanish.
 
 = 2.2.1 =
 Added localization properly for WPMU, using u-ching.com running BuddyPress  for sandbox.

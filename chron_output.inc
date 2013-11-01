@@ -5,6 +5,11 @@
 
 function start_chron() {
 
+
+// What language are you using?
+	$chq_locale = get_locale();
+
+
 // Load a function file
 	include_once('functions.inc');
 
@@ -24,20 +29,17 @@ function start_chron() {
 // Add Ads 
 	$permit_ads = get_option('permit_ads');
 
-
-$chq_locale = get_locale();
-
-if ($chq_locale == "es_ES"){
-	$title_text = "Citas de la Historia Cósmica"; $intro_text1 = " por"; $intro_text2 = "dia"; $intro_text3 = "de Luna";
-	$doot_text = "Día Fuera del Tiempo (25 julio)";
-} elseif ($chq_locale == "nl_NL"){
-	$title_text = "Kosmische Geschiedenis"; $intro_text1 = " voor"; $intro_text2 = "dag"; $intro_text3 = "van Maan";
-	$doot_text = "Dag Buiten de Tijd (25 juli)";
-} else {
-	$chq_locale = "en_EN";
-	$title_text = "Cosmic History Quote"; $intro_text1 = " for"; $intro_text2 = "day"; $intro_text3 = "of Moon";
-	$doot_text = "Day out of Time (July 25th)";
-} 
+     if ($chq_locale == "es_ES"){
+     	$title_text = "Citas de la Historia Cósmica"; $intro_text1 = " por"; $intro_text2 = "dia"; $intro_text3 = "de Luna";
+     	$doot_text = "Día Fuera del Tiempo (25 julio)";
+     } elseif ($chq_locale == "nl_NL"){
+     	$title_text = "Kosmische Geschiedenis"; $intro_text1 = " voor"; $intro_text2 = "dag"; $intro_text3 = "van Maan";
+     	$doot_text = "Dag Buiten de Tijd (25 juli)";
+     } else {
+     	$chq_locale = "en_EN";
+     	$title_text = "Cosmic History Quote"; $intro_text1 = " for"; $intro_text2 = "day"; $intro_text3 = "of Moon";
+     	$doot_text = "Day out of Time (July 25th)";
+     } 
 
 // Assign filenames to vars
      $titles_filename = $chq_locale."_titles.txt";
@@ -78,7 +80,7 @@ if ($chq_locale == "es_ES"){
 			$this_moon 	= $pieces[2];
 			$day_of_moon 	= $pieces[3];
 			$text 		= $pieces[4];
-			$ext_info 	= $pieces[5];
+//			$ext_info 	= $pieces[5];
 
                // Deal with the Day out of Time
                if ($this_moon != 0){
@@ -88,27 +90,33 @@ if ($chq_locale == "es_ES"){
                	$title_text = $doot_text;
                }
 
-               $intro_output = "<div class=intro_section>".htmlentities($title_text)."<br> ";
+//			$utf8_text = utf8_encode($topics_title);
+//               echo htmlentities($text);
+
+			$title_text = utf8_encode($title_text);
+			$text = utf8_encode($text);
+
+               $intro_output = "<div class=intro_section><strong>".$title_text."</strong><br> ";
                $intro_output .= "$today_greg_day_num.$today_greg_month_num.$today_greg_year_num, $intro_text2 $day_of_moon $intro_text3 $this_moon, $month_title</i></div>";
                
                if ($info_position == "T"){echo "$intro_output <P>";}
-               echo htmlentities($text);
-               if ($info_position == "B"){echo "<P> $intro_output";}
+               echo $text;
+               if ($info_position == "B"){echo "<P>\n".$intro_output;}
 			break;
 		}
      }
 
-echo "</div>";
-
-if ($permit_ads === "YES"){
-	echo "<div class=ads>";
-	echo "<a target=\"_BLANK\" href=\"http://lawoftime.org/\" title=\"Foundation for the Law of Time\">FLT</a>";
-	echo " ";
-	echo "<a target=\"_BLANK\" href=\"http://spacestationplaza.com/\" title=\"Space Station Plaza\">SSP</a>";
-	echo " ";
-	echo "<a target=\"_BLANK\" href=\"http://www.u-ching.com/\" title=\"uChing Network\">uCHING</a>";
-	echo "</div>";
-}
+     echo "</div>";
+     
+     if ($permit_ads === "YES"){
+     	echo "<div class=ads>";
+     	echo "<a target=\"_BLANK\" href=\"http://lawoftime.org/\" title=\"Foundation for the Law of Time\">FLT</a>";
+     	echo " ";
+     	echo "<a target=\"_BLANK\" href=\"http://spacestationplaza.com/\" title=\"Space Station Plaza\">SSP</a>";
+     	echo " ";
+     	echo "<a target=\"_BLANK\" href=\"http://www.u-ching.com/\" title=\"uChing Network\">uCHING</a>";
+     	echo "</div>";
+     }
 
 // End main containers
 	echo "</div>";
