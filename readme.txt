@@ -129,6 +129,9 @@ You can modify items such as:
 
 == Upgrade Notice ==
 
+= 2.2.3 =
+It should work in the latest WP and BP.
+
 = 2.2.2 =
 Fixed extended Spanish characters not showing up while viewing site in Spanish.
 
