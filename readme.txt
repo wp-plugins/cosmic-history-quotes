@@ -4,8 +4,8 @@ Author URI: http://anthonyfogleman.com/
 Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, uching, u-ching, iching, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas, Cosmic History
 Requires at least: WP 3.2, BuddyPress 1.2.9
-Tested up to: WP 3.6.1, BuddyPress 1.8.1
-Stable tag: 2.2.2
+Tested up to: WP 3.7.1, BuddyPress 1.8.1
+Stable tag: 2.2.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,7 +97,7 @@ You can modify items such as:
 
 == Changelog ==
 
-= 2.2.1 - 1.11.2013 =
+= 2.2.3 - 1.11.2013 =
 * Update : Fixed extended characters for Spanish not showing up properly.
 
 = 2.2.1 - 20.10.2013 =
