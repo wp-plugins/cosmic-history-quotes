@@ -1,9 +1,6 @@
 <?php
 
-// Had this before:
-
 function chq_create_menu() {
-
 	//create new top-level menu
 	add_options_page('CHQ Plugin Settings', 'CHQ Settings', 'administrator', __FILE__, 'chq_settings_page');
 	add_action( 'admin_init', 'cosmic_history_quotes_register_mysettings' );
@@ -22,6 +19,8 @@ function cosmic_history_quotes_register_mysettings() {
 	register_setting( 'chq-settings-group', 'show_chq_title' );
 
 }
+
+// Don't add anymore functions:
 
 function chq_settings_page() {
 ?>

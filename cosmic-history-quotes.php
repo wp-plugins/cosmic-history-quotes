@@ -3,7 +3,7 @@
 Plugin Name: Cosmic History Quotes
 Plugin URI: http://anthonyfogleman.com/blog/cosmic-history-quotes-wp-plugin/
 Description: Inserts 365 daily quotes from the seven volume Cosmic History Chronicles.  It changes daily! Works in English, Spanish or Dutch. Very lightweight widget.  Easily insert shortcode [cosmic-quotes] into any post, page or text widget.
-Version: 2.2.4
+Version: 2.2.5
 Author: Anthony R. Fogleman
 Author URI: http://anthonyfogleman.com
 License: GPLv2
@@ -24,8 +24,6 @@ License: GPLv2
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-
-// error_reporting(E_ALL);
 
 // Include main game output
 require_once('chron_output.inc');
@@ -35,11 +33,34 @@ add_shortcode('cosmic-quotes', 'start_chron');  // called from page with: [chron
 
 // Include wp menu and settings file
 require_once('settings.inc');
-
+
 // create custom plugin settings menu
-add_action('admin_menu', 'chq_create_menu');
-
-// This code makes sure shortcode will work in text widget
-add_filter('widget_text', 'do_shortcode');
-
+add_action('admin_menu', 'chq_create_menu');
+
+/* 
+
+To get "Settings" | Deactivate | Edit
+
+
+
+function chq_action_links( $links ) {
+   $links[] = '<a href="'. get_admin_url(null, 'options-general.php?page=cosmic-history-quotes/settings.inc') .'">Settings</a>';
+   $links[] = '<a href="http://uptimehosting.com/" target="_blank">More plugins by UptimeHosting</a>';
+   return $links;
+}
+add_filter( 'plugin_action_links_' . __FILE__, 'chq_action_links' );
+*/
+
+function plugin_add_settings_link( $links ) {
+    $settings_link = '<a href="options-general.php?page=cosmic-history-quotes/settings.inc">Settings</a>';
+  	array_push( $links, $settings_link );
+  	return $links;
+}
+$plugin = plugin_basename( __FILE__ );
+add_filter( "plugin_action_links_$plugin", 'plugin_add_settings_link' );
+
+
+
+
+
 /* EOF */

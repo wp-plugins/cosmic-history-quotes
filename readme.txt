@@ -5,7 +5,7 @@ Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, uching, u-ching, iching, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas, Cosmic History
 Requires at least: WP 3.2, BuddyPress 1.2.9
 Tested up to: WP 3.7.1, BuddyPress 1.8.1
-Stable tag: 2.2.4
+Stable tag: 2.2.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +96,9 @@ You can modify items such as:
 3. English output for March 18
 
 == Changelog ==
+
+= 2.2.5 - 2.11.2013 =
+* Update : Put link to settings on admin's plugin listing page.
 
 = 2.2.4 - 2.11.2013 =
 * Update : Made option to remove title "Cosmic History Quote".
