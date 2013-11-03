@@ -5,10 +5,8 @@
 
 function start_chron() {
 
-
 // What language are you using?
 	$chq_locale = get_locale();
-
 
 // Load a function file
 	include_once('functions.inc');
@@ -119,7 +117,6 @@ function start_chron() {
 			} else {
                     if ($info_position == "B"){echo "<P>\n".$intro_output;}
 			}
-
 		}
      }
 

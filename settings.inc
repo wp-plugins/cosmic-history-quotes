@@ -58,7 +58,6 @@ echo "</table>";
 
 <form method="post" action="options.php">
     <?php settings_fields( 'chq-settings-group' ); ?>
-    <?php // do_settings( 'chq-settings-group' ); ?>
     <table class="form-table">
 
 	   <tr valign="top">

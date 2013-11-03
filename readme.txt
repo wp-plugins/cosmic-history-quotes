@@ -5,13 +5,14 @@ Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, uching, u-ching, iching, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas, Cosmic History
 Requires at least: WP 3.2, BuddyPress 1.2.9
 Tested up to: WP 3.7.1, BuddyPress 1.8.1
-Stable tag: 2.2.6
+Stable tag: 2.2.7
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
+Inserts 365 daily quotes from the seven volume Cosmic History Chronicles.  It changes daily! Works in English, Spanish or Dutch. Very lightweight plugin. It has a widget you can drag into your sidebar, or you can insert the shortcode [cosmic-quotes] into any post, page or text widget.
 
-Each day, CHQ outputs one of 365 quotes selected from the 7-volume Cosmic History Chronicles at [__Lawoftime.org__](http://Lawoftime.org/).
+These quotes were selected from the 7-volume Cosmic History Chronicles at [__Lawoftime.org__](http://Lawoftime.org/).
 
 Cosmic History Quotes (CHQ) is a collaboration between Juryt Abma and Anthony Fogleman.
 
@@ -97,7 +98,10 @@ You can modify items such as:
 
 == Changelog ==
 
-= 2.2.6 - 2.11.2013 =
+= 2.2.7 - 3.11.2013 =
+* Update : Added a widget that you can drag into your sidebar.
+
+= 2.2.6 - 3.11.2013 =
 * Update : Cleaned up the code and fixed problem of cosmic-quotes not showing up in text widget.
 
 = 2.2.5 - 2.11.2013 =
@@ -137,6 +141,9 @@ You can modify items such as:
 * Includes three languages: English (en), Spanish (es), and Dutch (nl)
 
 == Upgrade Notice ==
+
+= 2.2.7 =
+Added a widget that you can drag into your sidebar.
 
 = 2.2.6 =
 Fixed problem of cosmic-quotes not showing up in text widget.

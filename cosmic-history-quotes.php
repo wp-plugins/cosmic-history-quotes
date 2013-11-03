@@ -2,8 +2,8 @@
 /*
 Plugin Name: Cosmic History Quotes
 Plugin URI: http://anthonyfogleman.com/blog/cosmic-history-quotes-wp-plugin/
-Description: Inserts 365 daily quotes from the seven volume Cosmic History Chronicles.  It changes daily! Works in English, Spanish or Dutch. Very lightweight widget.  Easily insert shortcode [cosmic-quotes] into any post, page or text widget.
-Version: 2.2.6
+Description: Inserts 365 daily quotes from the seven volume Cosmic History Chronicles.  It changes daily! Works in English, Spanish or Dutch. Very lightweight plugin. It has a widget you can drag into your sidebar, or you can insert the shortcode [cosmic-quotes] into any post, page or text widget.
+Version: 2.2.7
 Author: Anthony R. Fogleman
 Author URI: http://anthonyfogleman.com
 License: GPLv2
@@ -25,17 +25,25 @@ License: GPLv2
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+
+/* Add a widget to the dashboard.
+ * This function is hooked into the 'wp_dashboard_setup' action below.
+ */
+
+// Include dashboard widget
+include('chq_dashboard_widget.php');
+
 // This code creates the ability to use shortcodes in the sidebar
 add_filter('widget_text', 'do_shortcode');  
 
 // Include output
-require_once('chron_output.inc');
+include('chron_output.inc');
 
 // This code creates the ability to use shortcodes in the sidebar
 add_shortcode('cosmic-quotes', 'start_chron');  // called from page with: [chronicles default_lang="en"]
 
 // Include wp menu and settings file
-require_once('settings.inc');
+include('settings.inc');
 
 // create custom plugin settings menu
 add_action('admin_menu', 'chq_create_menu');
