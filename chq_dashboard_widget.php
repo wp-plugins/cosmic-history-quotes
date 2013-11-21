@@ -3,7 +3,7 @@ class chq_plugin_widget extends WP_Widget {
  
     // constructor
     function chq_plugin_widget() {
-		parent::WP_Widget(false, $name = __('Coxmic History Quotes', 'wp_widget_plugin') );
+		parent::WP_Widget(false, $name = __('Cosmic History Quotes', 'wp_widget_plugin') );
     }
 
 // widget form creation
