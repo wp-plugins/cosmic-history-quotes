@@ -23,7 +23,7 @@ function start_chron() {
 	$div_width_px = get_option('div_width');
 	$font_size_px = get_option('font_size'); if ($font_size_px == ""){$font_size_px = 10;}
 	$line_height_px = get_option('line_height_px'); if ($line_height_px == ""){$line_height_px = 14;}
-	$info_position = get_option('info_position'); if ($info_position == ""){$info_position = B;}
+	$info_position = get_option('info_position'); if ($info_position == ""){$info_position = "B";}
 // Add Ads 
 	$permit_credits = get_option('permit_credits');
 
@@ -62,20 +62,59 @@ function start_chron() {
 	$title_lines = file("$path/$titles_filename");
 	$data_lines = file("$path/$data_filename");
 
+
+
+// Start working with the date
+// Get requested day
+if (isset($_GET['dcode_day'])){
+	$dcode_yr = $_GET['dcode_yr'];
+	$dcode_mo = $_GET['dcode_mo'];
+	$dcode_day = $_GET['dcode_day'];
+}
+
+// Requests for $dcode_chapter
+// elseif (isset($_GET['dcode_chapter'])){}
+
+// Requests for $dcode_kin
+elseif (isset($_GET['dcode_kin'])){
+	$start_kin_id = $_GET['dcode_kin'];
+	$next_date_array = ucd_kin_to_next_gb($start_kin_id); // 	return array($next_gb_date_mysql, $days_to_gb);
+	$this_new_date = $next_date_array[0];
+
+     $this_date_pcs = explode('-',$this_new_date);
+
+	$dcode_yr = $this_date_pcs[0];
+	$dcode_mo = $this_date_pcs[1];
+	$dcode_day = $this_date_pcs[2];
+
+// Correct the gets
+	$_GET['dcode_yr'] = $dcode_yr;
+	$_GET['dcode_mo'] = $dcode_mo;
+	$_GET['dcode_day'] = $dcode_day;
+}
+
+ else {
 // Get today's date
-	$today_greg_month =  date("n"); // month numeral
-	$today_greg_month_abbrev =  date("M"); // month numeral
-	$today_greg_day =  date("j"); // day numeral without leading zeros
-	$today_greg_month_num =  date("m"); // 
-	$today_greg_day_num =  date("d"); // 
-	$today_greg_year_num =  date("Y"); // 
+	$dcode_yr = date('Y'); // Y	A full numeric representation of a year, 4 digits
+	$dcode_mo = date('m'); // m	Numeric representation of a month, with leading zeros
+	$dcode_day = date('d'); // d	Day of the month, 2 digits with leading zeros
+}
+
+// Format for MySQL, store in scalar and array
+$this_mysql_date = $dcode_yr."-".$dcode_mo."-".$dcode_day;
+$this_date_pcs = explode('-',$this_mysql_date);
+
+
+$this_nice_translated_date = utf8_encode(strftime("%e %B %Y", strtotime("$dcode_mo/$dcode_day/$dcode_yr")));
+
+
 
 // Loop through our array, show HTML source as HTML source; and line numbers too.
      foreach ($data_lines as $line_num => $line) {
 
 // Explode line
           $pieces = explode("_", $line);
-		if (($pieces[0] === $today_greg_day)&&($pieces[1] === $today_greg_month)){
+		if (($pieces[0] === $dcode_day)&&($pieces[1] === $dcode_mo)){
 
 // Assign Vars to today's chronicle
 			$this_moon 	= $pieces[2];
@@ -101,7 +140,7 @@ function start_chron() {
                	$intro_output = "<div class=chq_title_txt>".$title_text."</div> ";
 			}
 
-               $intro_output .= "<div class=chq_intro_section>$today_greg_day_num.$today_greg_month_num.$today_greg_year_num, $intro_text2 $day_of_moon $intro_text3 $this_moon, $month_title</i></div>";
+               $intro_output .= "<div class=chq_intro_section>$this_nice_translated_date, $intro_text2 $day_of_moon $intro_text3 $this_moon, $month_title</i></div>";
                
                if ($info_position == "N"){ 
 				// do nothing
