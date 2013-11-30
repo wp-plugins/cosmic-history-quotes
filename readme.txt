@@ -5,7 +5,7 @@ Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, uching, u-ching, iching, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas, Cosmic History
 Requires at least: WP 3.2
 Tested up to: WP 3.7.1
-Stable tag: 2.2.11
+Stable tag: 2.2.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,14 +35,17 @@ This plugin is part of a growing series of Dreamspell plugins, designed to work 
 * Dutch: Juryt Abma
 * Spanish: 13-lunas.net
 
-= Help Keep My Plugins Free =
+== About the Series ==
 
-If you find this plugin useful, please consider [__making a small donation__](http://anthonyfogleman.com/blog/donations/) to help contribute to my time invested and to further development of this and other interesting plugins and support the development of Natural Time tools to help us connect with each other in peaceful ways.  Thanks for your kind support! - [__Anthony Fogleman__](http://profiles.wordpress.org/tonyray/)
-
-I send my blessing to you and our relations with:
-
-Aho mitakeoasin, en lakesh, ahau!
-
+* There are three plugins that synchronize with each day and decoding.  This plugin is the third of a series developed to expand the use of Natural Time.
+* If you like this plugin, you might also like the [__uChing Decoder__](http://wordpress.org/plugins/u-ching-decoder/) and the [__13-Moon Synchronometer__](http://wordpress.org/plugins/13-moon-synchronometer/).  Each one synchronizes with the other.
+
+= Help Keep Our Plugins Free =
+
+If you find this plugin useful, please [__make a donation__](http://anthonyfogleman.com/blog/donations/) to help contribute to further development of this and other interesting plugins for development of Natural Time and connections in peaceful ways.  Thanks! - [__Anthony Fogleman__](http://profiles.wordpress.org/tonyray/)
+
+Blessing to you and all our relations with... Aho mitakeoasin, in lak'ech, ahau!
+
 == Installation ==
 
 = Automatic Method =
@@ -100,6 +103,9 @@ You can modify items such as:
 
 == Changelog ==
 
+= 2.2.2 - 27.11.2013 - NS1.26.5.16 =
+* Update : Changes to date sequence and tested with different themes and with other natural time plugins.
+
 = 2.2.11 - 27.11.2013 =
 * Update : Tweaked a bit in a few places to work better with development version u-ching-decoder plugin.
 
@@ -146,6 +152,9 @@ You can modify items such as:
 * Includes three languages: English (en), Spanish (es), and Dutch (nl)
 
 == Upgrade Notice ==
+
+= 2.2.2 =
+* Update : Changes to date sequence and tested with different themes and with other natural time plugins.
 
 = 2.2.11 =
 Good idea to upgrade if you're running our other plugins that work together.

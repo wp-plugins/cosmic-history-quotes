@@ -100,14 +100,14 @@ elseif (isset($_GET['dcode_kin'])){
 	$dcode_day = date('d'); // d	Day of the month, 2 digits with leading zeros
 }
 
+// Dispense with PHP warning
+$intro_output = "";
+
 // Format for MySQL, store in scalar and array
 $this_mysql_date = $dcode_yr."-".$dcode_mo."-".$dcode_day;
 $this_date_pcs = explode('-',$this_mysql_date);
 
-
 $this_nice_translated_date = utf8_encode(strftime("%e %B %Y", strtotime("$dcode_mo/$dcode_day/$dcode_yr")));
-
-
 
 // Loop through our array, show HTML source as HTML source; and line numbers too.
      foreach ($data_lines as $line_num => $line) {
@@ -129,9 +129,6 @@ $this_nice_translated_date = utf8_encode(strftime("%e %B %Y", strtotime("$dcode_
                } else { // it's the day out of time
                	$title_text = $doot_text;
                }
-
-//			$utf8_text = utf8_encode($topics_title);
-//               echo htmlentities($text);
 
 			$title_text = utf8_encode($title_text);
 			$text = utf8_encode($text);
