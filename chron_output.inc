@@ -76,7 +76,7 @@ if (isset($_GET['dcode_day'])){
 // elseif (isset($_GET['dcode_chapter'])){}
 
 // Requests for $dcode_kin
-elseif (isset($_GET['dcode_kin'])){
+if (isset($_GET['dcode_kin'])){
 	$start_kin_id = $_GET['dcode_kin'];
 	$next_date_array = ucd_kin_to_next_gb($start_kin_id); // 	return array($next_gb_date_mysql, $days_to_gb);
 	$this_new_date = $next_date_array[0];
@@ -96,8 +96,8 @@ elseif (isset($_GET['dcode_kin'])){
  else {
 // Get today's date
 	$dcode_yr = date('Y'); // Y	A full numeric representation of a year, 4 digits
-	$dcode_mo = date('m'); // m	Numeric representation of a month, with leading zeros
-	$dcode_day = date('d'); // d	Day of the month, 2 digits with leading zeros
+	$dcode_mo = date('n'); // m	Numeric representation of a month, with leading zeros
+	$dcode_day = date('j'); // d	Day of the month, 2 digits with leading zeros
 }
 
 // Dispense with PHP warning
