@@ -65,35 +65,13 @@ function start_chron() {
 
 
 // Start working with the date
-// Get requested day
 if (isset($_GET['dcode_day'])){
 	$dcode_yr = $_GET['dcode_yr'];
 	$dcode_mo = $_GET['dcode_mo'];
 	$dcode_day = $_GET['dcode_day'];
 }
 
-// Requests for $dcode_chapter
-// elseif (isset($_GET['dcode_chapter'])){}
-
-// Requests for $dcode_kin
-if (isset($_GET['dcode_kin'])){
-	$start_kin_id = $_GET['dcode_kin'];
-	$next_date_array = ucd_kin_to_next_gb($start_kin_id); // 	return array($next_gb_date_mysql, $days_to_gb);
-	$this_new_date = $next_date_array[0];
-
-     $this_date_pcs = explode('-',$this_new_date);
-
-	$dcode_yr = $this_date_pcs[0];
-	$dcode_mo = $this_date_pcs[1];
-	$dcode_day = $this_date_pcs[2];
-
-// Correct the gets
-	$_GET['dcode_yr'] = $dcode_yr;
-	$_GET['dcode_mo'] = $dcode_mo;
-	$_GET['dcode_day'] = $dcode_day;
-}
-
- else {
+if (!isset($dcode_day)){
 // Get today's date
 	$dcode_yr = date('Y'); // Y	A full numeric representation of a year, 4 digits
 	$dcode_mo = date('n'); // m	Numeric representation of a month, with leading zeros
