@@ -5,7 +5,7 @@ Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, uching, u-ching, iching, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas, Cosmic History
 Requires at least: WP 3.2
 Tested up to: WP 3.7.1
-Stable tag: 2.2.3
+Stable tag: 2.2.4
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +102,9 @@ You can modify items such as:
 3. English output for March 18
 
 == Changelog ==
+
+= 2.2.4 - 12.12.2013 - NS1.26.5.28 =
+* Bugfix : Fixed date check -- synching better now
 
 = 2.2.3 - 1.12.2013 - NS1.26.5.17 =
 * Bugfix : Fixed date check that caused nothing to appear
