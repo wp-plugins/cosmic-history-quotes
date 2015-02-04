@@ -3,7 +3,7 @@
 Plugin Name: Cosmic History Quotes
 Plugin URI: http://anthonyfogleman.com/blog/cosmic-history-quotes-wp-plugin/
 Description: Inserts 365 daily quotes from the seven volume Cosmic History Chronicles.  It changes daily! Works in English, Spanish or Dutch. Very lightweight plugin. It has a widget you can drag into your sidebar, or you can insert the shortcode [cosmic-quotes] into any post, page or text widget.
-Version: 2.2.4
+Version: 2.3.1
 Author: Anthony R. Fogleman
 Author URI: http://anthonyfogleman.com
 License: GPLv2

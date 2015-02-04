@@ -5,6 +5,11 @@
 
 function start_chron() {
 
+
+
+
+
+
 // What language are you using?
 	$chq_locale = get_locale();
 
@@ -63,20 +68,33 @@ function start_chron() {
 	$data_lines = file("$path/$data_filename");
 
 
+	if (!isset($dcode_day)){
+	// Get today's date
+		$dcode_yr  = date('Y'); // Y	A full numeric representation of a year, 4 digits
+		$dcode_mo  = date('n'); // m	Numeric representation of a month, with leading zeros
+		$dcode_day = date('j'); // d	Day of the month, 2 digits with leading zeros
+	}
+	
+	
+	// Is this a post?
+	$this_pg_type_post = get_post_type(get_the_ID());
+	if ($this_pg_type_post == "post"){
+		$this_post_date = get_the_date("Y-n-j");
+		$this_post_date_pcs = explode("-", $this_post_date);
+		$dcode_yr  = $this_post_date_pcs[0]; // Y	A full numeric representation of a year, 4 digits
+		$dcode_mo  = $this_post_date_pcs[1];  // n	Numeric representation of a month, with NO leading zeros
+		$dcode_day = $this_post_date_pcs[2];  // j	Day of the month, 2 digits with leading NO zeros
+	}
+	
+	
+	// IF THE DATE IS BEING DECODED, THIS TAKES PREFERENCE
+	if (isset($_GET['dcode_day'])){
+		$dcode_yr  = $_GET['dcode_yr'];
+		$dcode_mo  = $_GET['dcode_mo'];
+		$dcode_day = $_GET['dcode_day'];
+	}
 
-// Start working with the date
-if (isset($_GET['dcode_day'])){
-	$dcode_yr = $_GET['dcode_yr'];
-	$dcode_mo = $_GET['dcode_mo'];
-	$dcode_day = $_GET['dcode_day'];
-}
 
-if (!isset($dcode_day)){
-// Get today's date
-	$dcode_yr = date('Y'); // Y	A full numeric representation of a year, 4 digits
-	$dcode_mo = date('n'); // m	Numeric representation of a month, with leading zeros
-	$dcode_day = date('j'); // d	Day of the month, 2 digits with leading zeros
-}
 
 // Dispense with PHP warning
 $intro_output = "";
@@ -115,7 +133,17 @@ $this_nice_translated_date = utf8_encode(strftime("%e %B %Y", strtotime("$dcode_
                	$intro_output = "<div class=chq_title_txt>".$title_text."</div> ";
 			}
 
-               $intro_output .= "<div class=chq_intro_section>$this_nice_translated_date, $intro_text2 $day_of_moon $intro_text3 $this_moon, $month_title</i></div>";
+               $intro_output .= "<div class=chq_intro_section>$this_nice_translated_date, $intro_text2 $day_of_moon $intro_text3 $this_moon, $month_title</i>";
+
+// TESTING ----------------- 
+	
+
+//		$intro_output .= "$this_pg_type_post -- $date_info";
+		
+
+// TESTING ----------------- 
+
+               $intro_output .= "</div>";
                
                if ($info_position == "N"){ 
 				// do nothing
@@ -148,6 +176,8 @@ $this_nice_translated_date = utf8_encode(strftime("%e %B %Y", strtotime("$dcode_
 
 // End main containers
 	echo "</div>";
+	
+	
 
 // Clear all 
 	echo "<div style=clear:both;></div>";
