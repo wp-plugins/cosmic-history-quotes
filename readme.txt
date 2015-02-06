@@ -10,7 +10,7 @@ License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Inserts 365 daily quotes from the seven volume Cosmic History Chronicles.  It changes daily! Works in English, Spanish or Dutch. Very lightweight plugin. It has a widget you can drag into your sidebar, or you can insert the shortcode [cosmic-quotes] into any post, page or text widget.
+Inserts 365 daily quotes from the seven volume Cosmic History Chronicles. Changes daily. English, Spanish & Dutch. A lightweight plugin.
 
 These quotes were selected from the 7-volume Cosmic History Chronicles at [__Lawoftime.org__](http://Lawoftime.org/).
 
@@ -19,8 +19,8 @@ Cosmic History Quotes (CHQ) is a collaboration between Juryt Abma and Anthony Fo
 Usage: Install plugin, and insert sortcode `[cosmic-quotes]` into a text widget (for sidebar) or a post/page.
 
 This plugin is part of a growing series of Dreamspell plugins, designed to work on their own and together, changing together each day and when a different day is decoded. Check out the other plugins by [__tonyray and abmaya__](http://profiles.wordpress.org/tonyray/).
-
-= Contributors include =
+
+= Contributors Include =
 
 * [__Lawoftime.org__](http://Lawoftime.org/)
 * [__Planet Art Network (PAN)__](http://planetartnetwork.info/)
@@ -39,13 +39,13 @@ This plugin is part of a growing series of Dreamspell plugins, designed to work 
 
 * There are three plugins that synchronize with each day and decoding.  This plugin is the third of a series developed to expand the use of Natural Time.
 * If you like this plugin, you might also like the [__uChing Decoder__](http://wordpress.org/plugins/u-ching-decoder/) and the [__13-Moon Synchronometer__](http://wordpress.org/plugins/13-moon-synchronometer/).  Each one synchronizes with the other.
-
-= Help Keep Our Plugins Free =
-
-If you find this plugin useful, please [__make a donation__](http://anthonyfogleman.com/blog/donations/) to help contribute to further development of this and other interesting plugins for development of Natural Time and connections in peaceful ways.  Thanks! - [__Anthony Fogleman__](http://profiles.wordpress.org/tonyray/)
-
-Blessing to you and all our relations with... Aho mitakeoasin, in lak'ech, ahau!
-
+
+
+= Help Keep Our Plugins Free =
+If you find this plugin useful, please [__make a donation__](http://anthonyfogleman.com/blog/donations/) to help contribute to further development of this and other interesting plugins for development of Natural Time and connections in peaceful ways.  Thanks! - [__Anthony Fogleman__](http://profiles.wordpress.org/tonyray/)
+
+Blessing to you and all our relations with... Aho mitakeoasin, in lak'ech, ahau!
+
 == Installation ==
 
 = Automatic Method =
