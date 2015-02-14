@@ -57,13 +57,6 @@ a.langa:active	 {text-align: left;color:red;	font-size: 10px; line-height: 12px;
 	font-weight: bold; text-align: left; color:blue;	font-size: 10px; line-height: 12px;; 
 }
 
-.container {
-	clear: both;
-    overflow: hidden;
-    display: inline-block; /* Necessary to trigger "hasLayout" in IE */
-    display: block; /* Sets element back to block */
- }
-
 .langleft {
 	text-align: left;
      height: auto;
