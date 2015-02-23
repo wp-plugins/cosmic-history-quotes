@@ -1,6 +1,5 @@
 === Cosmic History Quotes === 
-Contributors: tonyray, 
-
+Contributors: tonyray, uching
 Author URI: http://anthonyfogleman.com/
 Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, uching, u-ching, iching, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas, Cosmic History
