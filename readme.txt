@@ -1,5 +1,6 @@
 === Cosmic History Quotes === 
-Contributors: tonyray, abmaya
+Contributors: tonyray, 
+
 Author URI: http://anthonyfogleman.com/
 Donate link: http://anthonyfogleman.com/blog/donations/
 Tags: 13-moon, natural-time, uching, u-ching, iching, dreamspell, tzolkin, galactic, quotes, law-of-time, planet-art-network, space-station-plaza, jose-arguellas, Cosmic History
@@ -18,7 +19,8 @@ Cosmic History Quotes (CHQ) is a collaboration between Juryt Abma and Anthony Fo
 
 Usage: Install plugin, and insert sortcode `[cosmic-quotes]` into a text widget (for sidebar) or a post/page.
 
-This plugin is part of a growing series of Dreamspell plugins, designed to work on their own and together, changing together each day and when a different day is decoded. Check out the other plugins by [__tonyray and abmaya__](http://profiles.wordpress.org/tonyray/).
+This plugin is part of a growing series of Dreamspell plugins, designed to work on their own and together, changing together each day and when a different day is decoded. Check out the other plugins by [__tonyray and 
+__](http://profiles.wordpress.org/tonyray/).
 
 = Contributors Include =
 
